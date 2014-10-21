@@ -5,19 +5,15 @@
 int main(int argc, const char * argv[]) {
     
     std::vector<float> x;
+    std::vector<float> y;
 
     x.push_back(6);
     x.push_back(18);
     x.push_back(9);
-    x.push_back(12);
-    
-   // std::vector<float> y = VTf::ge(x);
-    
-    //VTf::printVector(y);
-    
-    std::cout << VTf::standardDeviation(x) << std::endl;
-    
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+    y.push_back(3);
+    y.push_back(2);
+    y.push_back(1);
+
     return 0;
 }

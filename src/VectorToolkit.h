@@ -28,7 +28,7 @@
 #include <iostream>
 
 //=======================================================================
-/** VectorToolkit is a collection of useful functions for processing STL vectors */
+/** A collection of useful functions for processing STL vectors */
 template <class T>
 class VectorToolkit
 {
@@ -159,6 +159,31 @@ public:
      */
     static double standardDeviation(std::vector<T> v);
     
+    /** Calculates the L1-norm of a vector.
+     * @param v the vector from which to calculate the norm
+     * @returns the L1-norm of the vector
+     */
+    static double norm1(std::vector<T> v);
+    
+    /** Calculates the L2-norm of a vector.
+     * @param v the vector from which to calculate the norm
+     * @returns the L2-norm of the vector
+     */
+    static double norm2(std::vector<T> v);
+    
+    /** Calculates the p-norm of a vector.
+     * @param v the vector from which to calculate the norm
+     * @param p the exponent to use in the calculate of the norm
+     * @returns the p-norm of the vector
+     */
+    static double normP(std::vector<T> v,double p);
+    
+    /** Calculates the magnitude (just L2-norm) of a vector 
+     * @param v the vector from which to calculate the norm
+     * @returns the vector magnitude
+     */
+    static double magnitude(std::vector<T> v);
+    
     //=============================================================================
     // In place operations on vectors
     //=============================================================================
@@ -175,11 +200,23 @@ public:
      */
     static void multiplyInPlace(std::vector<T> &v,T scalar);
     
+    /** Multiply one vector by another
+     * @param v1 the first vector (to be multiplied in place)
+     * @param v2 the second vector
+     */
+    static void multiplyInPlace(std::vector<T> &v1,std::vector<T> v2);
+    
     /** Divide every element in a vector by a scalar.
      * @param v the vector to divide
      * @param scalar the scalar to divide the vector by
      */
     static void divideInPlace(std::vector<T> &v,T scalar);
+    
+    /** Divide one vector by another
+     * @param v1 the first vector (to be divided in place)
+     * @param v2 the second vector
+     */
+    static void divideInPlace(std::vector<T> &v1,std::vector<T> v2);
     
     /** Add a value to every element in a vector.
      * @param v the vector to which the value will be added
@@ -187,11 +224,23 @@ public:
      */
     static void addInPlace(std::vector<T> &v,T value);
     
+    /** Add one vector to another
+     * @param v1 the first vector (to be added to in place)
+     * @param v2 the second vector
+     */
+    static void addInPlace(std::vector<T> &v1,std::vector<T> v2);
+    
     /** Subtract a value from every element in a vector.
      * @param v the vector from which the value will be subtracted
      * @param value the value to be subtracted from each element of the vector
      */
     static void subtractInPlace(std::vector<T> &v,T value);
+    
+    /** Subtract one vector from another
+     * @param v1 the first vector (to be subtracted from in place)
+     * @param v2 the second vector
+     */
+    static void subtractInPlace(std::vector<T> &v1,std::vector<T> v2);
     
     /** Calculate the absolute value for each element of a vector.
      * @param v the vector to calculate the absolute value on
@@ -209,12 +258,26 @@ public:
      */
     static std::vector<T> multiply(std::vector<T> v,T scalar);
     
+    /** Multiply two vectors together.
+     * @param v1 the first vector
+     * @param v2 the second vector
+     * @returns the multiplication of the two vectors
+     */
+    static std::vector<T> multiply(std::vector<T> v1,std::vector<T> v2);
+    
     /** Divide every element in a vector by a scalar and return a new vector.
      * @param v the vector to divide
      * @param scalar the scalar to divide the vector by
      * @returns a vector divided by the scalar
      */
     static std::vector<T> divide(std::vector<T> v,T scalar);
+    
+    /** Divide one vector by another.
+     * @param v1 the first vector
+     * @param v2 the second vector
+     * @returns the first vector divided by the second
+     */
+    static std::vector<T> divide(std::vector<T> v1,std::vector<T> v2);
     
     /** Add a value to every element in a vector and return a new vector.
      * @param v the vector to which the value will be added
@@ -223,12 +286,26 @@ public:
      */
     static std::vector<T> add(std::vector<T> v,T value);
     
+    /** Add one vector to another.
+     * @param v1 the first vector
+     * @param v2 the second vector
+     * @returns the second vector added to the first
+     */
+    static std::vector<T> add(std::vector<T> v1,std::vector<T> v2);
+    
     /** Subtract a value from every element in a vector and return a new vector.
      * @param v the vector from which the value will be subtracted
      * @param value the value to be subtracted from each element of the vector
      * @returns a vector with the value subtracted from every element
      */
     static std::vector<T> subtract(std::vector<T> v,T value);
+    
+    /** Subtract one vector from another.
+     * @param v1 the first vector
+     * @param v2 the second vector
+     * @returns the second vector subtracted from the first
+     */
+    static std::vector<T> subtract(std::vector<T> v1,std::vector<T> v2);
     
     /** Calculate the absolute value for each element of a vector.
      * @param v the vector to calculate the absolute value on
@@ -238,9 +315,27 @@ public:
     
     
     //=============================================================================
+    // Distances and Similarity Measures
+    //=============================================================================
     
-    private:
-        VectorToolkit();
+    /** Calculates the dot product between two vectors.
+     * @param v1 the first vector
+     * @param v2 the second vector
+     * @returns the dot product of the two vectors
+     */
+    static double dotProduct(std::vector<T> v1,std::vector<T> v2);
+    
+    /** Calculates the Euclidean distance between two vectors.
+     * @param v1 the first vector
+     * @param v2 the second vector
+     * @returns the Euclidean distance between the two vectors
+     */
+    static double euclideanDistance(std::vector<T> v1,std::vector<T> v2);
+    
+    //=============================================================================
+    
+private:
+    VectorToolkit();
 };
 
 //=======================================================================

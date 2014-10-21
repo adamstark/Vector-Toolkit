@@ -489,11 +489,98 @@ double VectorToolkit<T>::standardDeviation(std::vector<T> v)
 
 //============================================================
 template <class T>
+double VectorToolkit<T>::norm1(std::vector<T> v)
+{
+    double sumVal = 0.0;
+    
+    // sum absolute values
+    for (int i = 0;i < v.size();i++)
+    {
+        if (v[i] > 0)
+        {
+            sumVal += (double) v[i];
+        }
+        else
+        {
+            sumVal += (double) (-1*v[i]);
+        }
+    }
+    
+    return sumVal;
+}
+
+//============================================================
+template <class T>
+double VectorToolkit<T>::norm2(std::vector<T> v)
+{
+    double sumVal = 0.0;
+    
+    // sum squares
+    for (int i = 0;i < v.size();i++)
+    {
+        sumVal += (double) (v[i]*v[i]);
+    }
+
+    return sqrt(sumVal);
+}
+
+//============================================================
+template <class T>
+double VectorToolkit<T>::magnitude(std::vector<T> v)
+{
+    // just another name for L2-norm
+    return norm2(v);
+}
+
+//============================================================
+template <class T>
+double VectorToolkit<T>::normP(std::vector<T> v,double p)
+{
+    double sumVal = 0.0;
+    
+    for (int i = 0;i < v.size();i++)
+    {
+        double val;
+        
+        if (v[i] > 0)
+        {
+            val = (double) v[i];
+        }
+        else
+        {
+            val = (double) (-1*v[i]);
+        }
+        
+        sumVal += pow(val,p);
+    }
+
+    return pow(sumVal,1.0/p);
+}
+
+//============================================================
+template <class T>
 void VectorToolkit<T>::multiplyInPlace(std::vector<T> &v,T scalar)
 {
     for (int i = 0;i < v.size();i++)
     {
         v[i] *= scalar;
+    }
+}
+
+//============================================================
+template <class T>
+void VectorToolkit<T>::multiplyInPlace(std::vector<T> &v1,std::vector<T> v2)
+{
+    if (v1.size() == v2.size())
+    {
+        for (int i = 0;i < v1.size();i++)
+        {
+            v1[i] *= v2[i];
+        }
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in vector multiply");
     }
 }
 
@@ -516,11 +603,52 @@ void VectorToolkit<T>::divideInPlace(std::vector<T> &v,T scalar)
 
 //============================================================
 template <class T>
+void VectorToolkit<T>::divideInPlace(std::vector<T> &v1,std::vector<T> v2)
+{
+    if (v1.size() == v2.size())
+    {
+        if (!contains(v2, 0))
+        {
+            for (int i = 0;i < v1.size();i++)
+            {
+                v1[i] *= v2[i];
+            }
+        }
+        else
+        {
+            throw std::invalid_argument( "Attempted to divide by vector containing zeros");
+        }
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in vector divide");
+    }
+}
+
+//============================================================
+template <class T>
 void VectorToolkit<T>::addInPlace(std::vector<T> &v,T value)
 {
     for (int i = 0;i < v.size();i++)
     {
         v[i] += value;
+    }
+}
+
+//============================================================
+template <class T>
+void VectorToolkit<T>::addInPlace(std::vector<T> &v1,std::vector<T> v2)
+{
+    if (v1.size() == v2.size())
+    {
+        for (int i = 0;i < v1.size();i++)
+        {
+            v1[i] += v2[i];
+        }
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in vector add");
     }
 }
 
@@ -532,6 +660,24 @@ void VectorToolkit<T>::subtractInPlace(std::vector<T> &v,T value)
     {
         v[i] -= value;
     }
+}
+
+//============================================================
+template <class T>
+void VectorToolkit<T>::subtractInPlace(std::vector<T> &v1,std::vector<T> v2)
+{
+    if (v1.size() == v2.size())
+    {
+        for (int i = 0;i < v1.size();i++)
+        {
+            v1[i] -= v2[i];
+        }
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in vector subtraction");
+    }
+
 }
 
 //============================================================
@@ -564,6 +710,27 @@ std::vector<T> VectorToolkit<T>::multiply(std::vector<T> v,T scalar)
 
 //============================================================
 template <class T>
+std::vector<T> VectorToolkit<T>::multiply(std::vector<T> v1,std::vector<T> v2)
+{
+    if (v1.size() == v2.size())
+    {
+        std::vector<T> result;
+        
+        for (int i = 0;i < v1.size();i++)
+        {
+            result.push_back(v1[i] * v2[i]);
+        }
+        
+        return result;
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in vector multiply");
+    }
+}
+
+//============================================================
+template <class T>
 std::vector<T> VectorToolkit<T>::divide(std::vector<T> v,T scalar)
 {
     if (scalar != 0)
@@ -585,6 +752,34 @@ std::vector<T> VectorToolkit<T>::divide(std::vector<T> v,T scalar)
 
 //============================================================
 template <class T>
+std::vector<T> VectorToolkit<T>::divide(std::vector<T> v1,std::vector<T> v2)
+{
+    if (v1.size() == v2.size())
+    {
+        if (!contains(v2, 0))
+        {
+            std::vector<T> result;
+            
+            for (int i = 0;i < v1.size();i++)
+            {
+                result.push_back(v1[i] * v2[i]);
+            }
+            
+            return result;
+        }
+        else
+        {
+            throw std::invalid_argument( "Attempted to divide by vector containing zeros");
+        }
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in vector divide");
+    }
+}
+
+//============================================================
+template <class T>
 std::vector<T> VectorToolkit<T>::add(std::vector<T> v,T value)
 {
     std::vector<T> result;
@@ -599,6 +794,27 @@ std::vector<T> VectorToolkit<T>::add(std::vector<T> v,T value)
 
 //============================================================
 template <class T>
+std::vector<T> VectorToolkit<T>::add(std::vector<T> v1,std::vector<T> v2)
+{
+    if (v1.size() == v2.size())
+    {
+        std::vector<T> result;
+        
+        for (int i = 0;i < v1.size();i++)
+        {
+            result.push_back(v1[i] + v2[i]);
+        }
+        
+        return result;
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in vector add");
+    }
+}
+
+//============================================================
+template <class T>
 std::vector<T> VectorToolkit<T>::subtract(std::vector<T> v,T value)
 {
     std::vector<T> result;
@@ -609,6 +825,27 @@ std::vector<T> VectorToolkit<T>::subtract(std::vector<T> v,T value)
     }
     
     return result;
+}
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::subtract(std::vector<T> v1,std::vector<T> v2)
+{
+    if (v1.size() == v2.size())
+    {
+        std::vector<T> result;
+        
+        for (int i = 0;i < v1.size();i++)
+        {
+            result.push_back(v1[i] - v2[i]);
+        }
+        
+        return result;
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in vector subtraction");
+    }
 }
 
 //============================================================
@@ -630,6 +867,63 @@ std::vector<T> VectorToolkit<T>::abs(std::vector<T> v)
     }
     
     return result;
+}
+
+//============================================================
+template <class T>
+double VectorToolkit<T>::dotProduct(std::vector<T> v1,std::vector<T> v2)
+{
+    // if vector size is the same
+    if (v1.size() == v2.size())
+    {
+        double sumVal = 0.0;
+        
+        // sum the element-wise product
+        for (int i = 0;i < v1.size();i++)
+        {
+            sumVal += (v1[i]*v2[i]);
+        }
+        
+        // return the sum as the dot product
+        return sumVal;
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in vector dot product");
+    }
+}
+
+//============================================================
+template <class T>
+double VectorToolkit<T>::euclideanDistance(std::vector<T> v1,std::vector<T> v2)
+{
+    // if vector size is the same
+    if (v1.size() == v2.size())
+    {
+        double sumVal = 0.0;
+        
+        // sum the squared difference
+        for (int i = 0;i < v1.size();i++)
+        {
+            double diff = (double) (v1[i] - v2[i]);
+            sumVal += (diff*diff);
+        }
+        
+        // if sum is bigger than zero
+        if (sumVal > 0)
+        {
+            // return the square root of the sum as the Euclidean distance
+            return sqrt(sumVal);
+        }
+        else // all differences were zero, so report 0.0 as Euclidean distance
+        {
+            return 0.0;
+        }
+    }
+    else
+    {
+        throw std::invalid_argument( "Vector lengths differ in Euclidean distance calculation");
+    }
 }
 
 //=======================================================================

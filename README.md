@@ -15,9 +15,7 @@ Planned Future Features
 -----------------------
 
 - mode
-- norm1
-- norm2 / magnitude 
-- p-norm
+
 - indices of all maxima
 - indices of all minima
 - squared
@@ -25,16 +23,9 @@ Planned Future Features
 - sort
 - reverse
 
-- multiply vectors / dot product
-- add vectors
-- subtract vectors
-- divide vectorss
 - cosine distance
-- euclidean distance
 - manhattan distance
- 
-- standard error
- 
+  
 - get sub-range of vector as new vector (e.g. elements 4-80)
 - get even indices as new vector
 - get odd indices as new vector
