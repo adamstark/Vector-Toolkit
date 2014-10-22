@@ -8,6 +8,10 @@ The Vector Toolkit is developed and maintained by Adam Stark.
 Version History
 ---------------
 
+**v1.0.2 - 22/10/2014**
+
+- Updated documentation
+
 **v1.0.1 - 22/10/2014**
 
 - First full version
