@@ -21,7 +21,7 @@ BOOST_AUTO_TEST_CASE(Boolean1)
     
     BOOST_CHECK_EQUAL(VTi::contains(x, 5), false);
     
-    BOOST_CHECK_EQUAL(VTi::contains(x, 15), false);
+    BOOST_CHECK_EQUAL(VTi::contains(x, 15), false);    
 }
 
 //=============================================================
