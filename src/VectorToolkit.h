@@ -139,31 +139,31 @@ public:
     static double product(std::vector<T> v);
     
     /** Calculates the arithmetic mean of the elements in a vector
-     @param v the vector from which to calculate the arithmetic mean
+     * @param v the vector from which to calculate the arithmetic mean
      * @returns the arithmetic mean of the vector v
      */
     static double mean(std::vector<T> v);
     
     /** Calculates the geometric mean of the elements in a vector
-     @param v the vector from which to calculate the geometric mean
+     * @param v the vector from which to calculate the geometric mean
      * @returns the geometric mean of the vector v
      */
     static double geometricMean(std::vector<T> v);
     
     /** Calculates the median of the elements in a vector
-     @param v the vector from which to calculate the median
+     * @param v the vector from which to calculate the median
      * @returns the median of the vector v
      */
     static double median(std::vector<T> v);
     
     /** Calculates the variance of the elements in a vector
-     @param v the vector from which to calculate the variance
+     * @param v the vector from which to calculate the variance
      * @returns the variance of the vector v
      */
     static double variance(std::vector<T> v);
     
     /** Calculates the standard deviation of the elements in a vector
-     @param v the vector from which to calculate the standard deviation
+     * @param v the vector from which to calculate the standard deviation
      * @returns the standard deviation of the vector v
      */
     static double standardDeviation(std::vector<T> v);
