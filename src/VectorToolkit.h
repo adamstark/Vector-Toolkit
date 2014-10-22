@@ -45,10 +45,10 @@ public:
     static bool containsOnlyZeros(std::vector<T> v);
     
     /** @Returns true if every element is greater than or equal to zero */
-    static bool isAllPositive(std::vector<T> v);
+    static bool isAllPositiveOrZero(std::vector<T> v);
 
     /** @Returns true if every element is less than or equal to zero */
-    static bool isAllNegative(std::vector<T> v);
+    static bool isAllNegativeOrZero(std::vector<T> v);
     
     /** Returns true if a given element is in the vector.
      * @param v the vector to examine
@@ -350,9 +350,47 @@ public:
      */
     static std::vector<T> squareRoot(std::vector<T> v);
     
+    /** Scales the values in a vector to take values in the range [lowerLimit, upperLimit]
+     * @param v the vector to scale
+     * @param lowerLimit the lower limit of the scaled vector
+     * @param upperLimit the uppoer limit of the scaled vector
+     * @returns a double precision vector containing the scaled vector
+     */
+    static std::vector<double> scale(std::vector<T> v,double lowerLimit,double upperLimit);
+    
     /** Calculate the element-wise difference for a vector */
     static std::vector<T> difference(std::vector<T> v);
-        
+    
+    //=============================================================================
+    // Quick Vector Creation
+    //=============================================================================
+    
+    /** Create a new vector of zeros of length N */
+    static std::vector<T> zeros(int N);
+    
+    /** Create a new vector of ones of length N */
+    static std::vector<T> ones(int N);
+    
+    /** Create a new vector with values increasing from 0->(maxValue-1).
+     * @param maxValue the upper limit of the range
+     * @returns a new vector containing values in the range [0,maxValue)
+     */
+    static std::vector<T> range(int maxValue);
+    
+    /** Create a new vector with values increasing from minValue->(maxValue-1).
+     * @param minValue the lower limit of the range
+     * @param maxValue the upper limit of the range
+     * @returns a new vector containing values in the range [minValue,maxValue)
+     */
+    static std::vector<T> range(int minValue,int maxValue);
+    
+    /** Create a new vector with values in the range [limit1,limit2], with specified increments.
+     * @param limit1 the first limit
+     * @param limit2 the second limit
+     * @param step the increment to use
+     * @returns a new vector containing values in the range [limit1,limit2], with specified incremements.
+     */
+    static std::vector<T> range(int limit1,int limit2,int step);
     
     //=============================================================================
     // Distances and Similarity Measures

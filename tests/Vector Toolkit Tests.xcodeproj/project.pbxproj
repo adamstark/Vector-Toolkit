@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30E400619F791E100220F56 /* QuickVectorCreationTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */; };
+		E30E400819F79A9200220F56 /* BooleanFunctionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */; };
 		E3C13A7E19F5634B009B0BE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C13A7D19F5634B009B0BE3 /* main.cpp */; };
 		E3C13A8719F56378009B0BE3 /* VectorToolkit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C13A8519F56378009B0BE3 /* VectorToolkit.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QuickVectorCreationTests.cpp; sourceTree = "<group>"; };
+		E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BooleanFunctionTests.cpp; sourceTree = "<group>"; };
 		E3C13A7A19F5634B009B0BE3 /* Vector Toolkit Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Vector Toolkit Tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C13A7D19F5634B009B0BE3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E3C13A8519F56378009B0BE3 /* VectorToolkit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorToolkit.cpp; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				E3C13A7D19F5634B009B0BE3 /* main.cpp */,
+				E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */,
+				E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */,
 			);
 			path = "Vector Toolkit Tests";
 			sourceTree = "<group>";
@@ -132,7 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E30E400619F791E100220F56 /* QuickVectorCreationTests.cpp in Sources */,
 				E3C13A7E19F5634B009B0BE3 /* main.cpp in Sources */,
+				E30E400819F79A9200220F56 /* BooleanFunctionTests.cpp in Sources */,
 				E3C13A8719F56378009B0BE3 /* VectorToolkit.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +225,13 @@
 		E3C13A8219F5634B009B0BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lboost_unit_test_framework";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -224,6 +239,13 @@
 		E3C13A8319F5634B009B0BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lboost_unit_test_framework";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

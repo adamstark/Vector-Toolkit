@@ -55,7 +55,7 @@ bool VectorToolkit<T>::containsOnlyZeros(std::vector<T> v)
 
 //============================================================
 template <class T>
-bool VectorToolkit<T>::isAllPositive(std::vector<T> v)
+bool VectorToolkit<T>::isAllPositiveOrZero(std::vector<T> v)
 {
     if (!isEmpty(v))
     {
@@ -77,7 +77,7 @@ bool VectorToolkit<T>::isAllPositive(std::vector<T> v)
 
 //============================================================
 template <class T>
-bool VectorToolkit<T>::isAllNegative(std::vector<T> v)
+bool VectorToolkit<T>::isAllNegativeOrZero(std::vector<T> v)
 {
     if (!isEmpty(v))
     {
@@ -458,7 +458,7 @@ double VectorToolkit<T>::median(std::vector<T> v)
         else // if the length is odd
         {
             // take the middle element
-            median = v[L / 2];
+            median = v[(L-1) / 2];
         }
         
         // return the median
@@ -745,7 +745,7 @@ void VectorToolkit<T>::squareInPlace(std::vector<T> &v)
 template <class T>
 void VectorToolkit<T>::squareRootInPlace(std::vector<T> &v)
 {
-    if (isAllPositive(v))
+    if (isAllPositiveOrZero(v))
     {
         for (int i = 0;i < v.size();i++)
         {
@@ -967,7 +967,7 @@ std::vector<T> VectorToolkit<T>::square(std::vector<T> v)
 template <class T>
 std::vector<T> VectorToolkit<T>::squareRoot(std::vector<T> v)
 {
-    if (isAllPositive(v))
+    if (isAllPositiveOrZero(v))
     {
         std::vector<T> result;
         
@@ -986,6 +986,28 @@ std::vector<T> VectorToolkit<T>::squareRoot(std::vector<T> v)
 
 //============================================================
 template <class T>
+std::vector<double> VectorToolkit<T>::scale(std::vector<T> v,double lowerLimit,double upperLimit)
+{
+    std::vector<double> result;
+    
+    double minVal = (double) min(v);
+    double maxVal = (double) max(v);
+    double outputRange = upperLimit - lowerLimit;
+    double inputRange = maxVal - minVal;
+    
+    for (int i = 0;i < v.size();i++)
+    {
+        double value = (double) v[i];
+        double scaledValue = ((value - minVal) * outputRange) / inputRange + lowerLimit;
+        
+        result.push_back(scaledValue);
+    }
+    
+    return result;
+}
+
+//============================================================
+template <class T>
 std::vector<T> VectorToolkit<T>::difference(std::vector<T> v)
 {
     std::vector<T> result;
@@ -993,6 +1015,90 @@ std::vector<T> VectorToolkit<T>::difference(std::vector<T> v)
     for (int i = 1;i < v.size();i++)
     {
         result.push_back(v[i]-v[i-1]);
+    }
+    
+    return result;
+}
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::zeros(int N)
+{
+    if (N >= 0)
+    {
+        std::vector<T> result;
+        
+        for (int i = 0;i < N;i++)
+        {
+            result.push_back(0);
+        }
+        
+        return result;
+    }
+    else
+    {
+        throw std::invalid_argument( "Cannot create vector with negative length");
+    }
+}
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::ones(int N)
+{
+    if (N >= 0)
+    {
+        std::vector<T> result;
+        
+        for (int i = 0;i < N;i++)
+        {
+            result.push_back(1);
+        }
+        
+        return result;
+    }
+    else
+    {
+        throw std::invalid_argument( "Cannot create vector with negative length");
+    }
+}
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::range(int maxValue)
+{
+    return range(0, maxValue, 1);
+}
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::range(int minValue,int maxValue)
+{
+    return range(minValue, maxValue, 1);
+}
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::range(int limit1,int limit2,int step)
+{
+    std::vector<T> result;
+    
+    if (step > 0)
+    {
+        for (T i = limit1;i < limit2;i += step)
+        {
+            result.push_back(i);
+        }
+    }
+    else if (step < 0)
+    {
+        for (T i = limit1;i > limit2;i += step)
+        {
+            result.push_back(i);
+        }
+    }
+    else
+    {
+        throw std::invalid_argument( "Cannot use a step size of 0 when creating a range of values");
     }
     
     return result;
