@@ -1,6 +1,6 @@
 //=======================================================================
 /** @file VectorToolkit.cpp
- *  @brief Useful methods whe working with STL vectors
+ *  @brief A collection of useful functions for processing STL vectors
  *  @author Adam Stark
  *  @copyright Copyright (C) 2014  Adam Stark
  *
@@ -283,6 +283,44 @@ T VectorToolkit<T>::getFirstElement(std::vector<T> v)
 
 //============================================================
 template <class T>
+std::vector<T> VectorToolkit<T>::getEvenElements(std::vector<T> v)
+{
+    return getEveryNthElementStartingFromK(v, 2, 0);
+}
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::getOddElements(std::vector<T> v)
+{
+    return getEveryNthElementStartingFromK(v, 2, 1);
+}
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::getEveryNthElementStartingFromK(std::vector<T> v,int n,int k)
+{
+    if ((n >= v.size()) || (n >= v.size()))
+    {
+        throw std::invalid_argument( "Invalid arguments for getEveryNthElementStartingFromK()");
+    }
+    else
+    {
+        std::vector<T> result;
+        
+        int i = k;
+        
+        while (i < v.size())
+        {
+            result.push_back(v[i]);
+            i += n;
+        }
+        
+        return result;
+    }
+}
+
+//============================================================
+template <class T>
 void VectorToolkit<T>::fillVectorWith(std::vector<T> &v,T element)
 {
     for (int i = 0;i < v.size();i++)
@@ -409,7 +447,7 @@ double VectorToolkit<T>::median(std::vector<T> v)
         size_t L = v.size(); // store the size
         
         // sort the vector
-        sort(v.begin(), v.end());
+        std::sort(v.begin(), v.end());
         
         // if the length is even
         if (L  % 2 == 0)
@@ -693,6 +731,47 @@ void VectorToolkit<T>::absInPlace(std::vector<T> &v)
     }
 }
 
+//============================================================
+template <class T>
+void VectorToolkit<T>::squareInPlace(std::vector<T> &v)
+{
+    for (int i = 0;i < v.size();i++)
+    {
+        v[i] = v[i]*v[i];
+    }
+}
+
+//============================================================
+template <class T>
+void VectorToolkit<T>::squareRootInPlace(std::vector<T> &v)
+{
+    if (isAllPositive(v))
+    {
+        for (int i = 0;i < v.size();i++)
+        {
+            v[i] = (T) sqrt((double)v[i]);
+        }
+    }
+    else
+    {
+        throw std::invalid_argument( "Attempted to compute square root of vector containing negative numbers");
+    }
+}
+
+
+//============================================================
+template <class T>
+void VectorToolkit<T>::sort(std::vector<T> &v)
+{
+    std::sort(v.begin(),v.end());
+}
+
+//============================================================
+template <class T>
+void VectorToolkit<T>::reverse(std::vector<T> &v)
+{
+    std::reverse(v.begin(), v.end());
+}
 
 //============================================================
 template <class T>
@@ -871,6 +950,56 @@ std::vector<T> VectorToolkit<T>::abs(std::vector<T> v)
 
 //============================================================
 template <class T>
+std::vector<T> VectorToolkit<T>::square(std::vector<T> v)
+{
+    std::vector<T> result;
+    
+    for (int i = 0;i < v.size();i++)
+    {
+        result.push_back(v[i]*v[i]);
+    }
+    
+    return result;
+}
+
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::squareRoot(std::vector<T> v)
+{
+    if (isAllPositive(v))
+    {
+        std::vector<T> result;
+        
+        for (int i = 0;i < v.size();i++)
+        {
+            result.push_back((T) sqrt((double)v[i]));
+        }
+        
+        return result;
+    }
+    else
+    {
+        throw std::invalid_argument( "Attempted to compute square root of vector containing negative numbers");
+    }
+}
+
+//============================================================
+template <class T>
+std::vector<T> VectorToolkit<T>::difference(std::vector<T> v)
+{
+    std::vector<T> result;
+    
+    for (int i = 1;i < v.size();i++)
+    {
+        result.push_back(v[i]-v[i-1]);
+    }
+    
+    return result;
+}
+
+//============================================================
+template <class T>
 double VectorToolkit<T>::dotProduct(std::vector<T> v1,std::vector<T> v2)
 {
     // if vector size is the same
@@ -924,6 +1053,20 @@ double VectorToolkit<T>::euclideanDistance(std::vector<T> v1,std::vector<T> v2)
     {
         throw std::invalid_argument( "Vector lengths differ in Euclidean distance calculation");
     }
+}
+
+//============================================================
+template <class T>
+double VectorToolkit<T>::cosineSimilarity(std::vector<T> v1,std::vector<T> v2)
+{
+   return dotProduct(v1, v2) / (magnitude(v1) * magnitude(v2));
+}
+
+//============================================================
+template <class T>
+double VectorToolkit<T>::cosineDistance(std::vector<T> v1,std::vector<T> v2)
+{
+    return 1.0 - cosineSimilarity(v1, v2);
 }
 
 //=======================================================================

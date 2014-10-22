@@ -8,32 +8,8 @@ The Vector Toolkit is developed and maintained by Adam Stark.
 Version History
 ---------------
 
-**v1.0 - ??/??/2014**
+**v1.0.0 - ??/??/2014**
 
-
-Planned Future Features
------------------------
-
-- mode
-
-- indices of all maxima
-- indices of all minima
-- squared
-- square root
-- sort
-- reverse
-
-- cosine distance
-- manhattan distance
-  
-- get sub-range of vector as new vector (e.g. elements 4-80)
-- get even indices as new vector
-- get odd indices as new vector
-- get every nth element
-- get every nth element starting at k
- 
-- Normalise by max and sum
-- difference between elements
 
 License
 -------

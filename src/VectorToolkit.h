@@ -1,6 +1,6 @@
 //=======================================================================
 /** @file VectorToolkit.h
- *  @brief Useful methods whe working with STL vectors
+ *  @brief A collection of useful functions for processing STL vectors
  *  @author Adam Stark
  *  @copyright Copyright (C) 2014  Adam Stark
  *
@@ -104,6 +104,15 @@ public:
     /** @Returns the first element of the vector */
     static T getFirstElement(std::vector<T> v);
     
+    /** @Returns a vector containing only the even elements of an input vector */
+    static std::vector<T> getEvenElements(std::vector<T> v);
+
+    /** @Returns a vector containing only the odd elements of an input vector */
+    static std::vector<T> getOddElements(std::vector<T> v);
+    
+    /** Given an input vector, @returns a vector containing every nth element, starting from k  */    
+    static std::vector<T> getEveryNthElementStartingFromK(std::vector<T> v,int n,int k);
+    
     //=============================================================================
     // Sum, averages, and other statistics
     //=============================================================================
@@ -178,7 +187,7 @@ public:
      */
     static double normP(std::vector<T> v,double p);
     
-    /** Calculates the magnitude (just L2-norm) of a vector 
+    /** Calculates the magnitude (L2-norm) of a vector 
      * @param v the vector from which to calculate the norm
      * @returns the vector magnitude
      */
@@ -247,6 +256,22 @@ public:
      */
     static void absInPlace(std::vector<T> &v);
     
+    /** Calculate the square of each element of a vector.
+     * @param v the vector to calculate the square of
+     */
+    static void squareInPlace(std::vector<T> &v);
+    
+    /** Calculate the square root of each element of a vector.
+     * @param v the vector to calculate the square root of
+     */
+    static void squareRootInPlace(std::vector<T> &v);
+    
+    /** Sorts a vector */
+    static void sort(std::vector<T> &v);
+
+    /** Reverses a vector */
+    static void reverse(std::vector<T> &v);
+    
     //=============================================================================
     // Operations that return vectors
     //=============================================================================
@@ -313,6 +338,22 @@ public:
      */
     static std::vector<T> abs(std::vector<T> v);
     
+    /** Calculate the square of each element of a vector.
+     * @param v the vector to calculate the square of
+     * @returns the squared vector
+     */
+    static std::vector<T> square(std::vector<T> v);
+    
+    /** Calculate the square root of each element of a vector.
+     * @param v the vector to calculate the square root of
+     * @returns the square root of the vector
+     */
+    static std::vector<T> squareRoot(std::vector<T> v);
+    
+    
+    
+    static std::vector<T> difference(std::vector<T> v);
+        
     
     //=============================================================================
     // Distances and Similarity Measures
@@ -331,6 +372,20 @@ public:
      * @returns the Euclidean distance between the two vectors
      */
     static double euclideanDistance(std::vector<T> v1,std::vector<T> v2);
+    
+    /** Calculates the Cosine similarity between two vectors.
+     * @param v1 the first vector
+     * @param v2 the second vector
+     * @returns the Cosine similarity between the two vectors
+     */
+    static double cosineSimilarity(std::vector<T> v1,std::vector<T> v2);
+    
+    /** Calculates the Cosine distance between two vectors.
+     * @param v1 the first vector
+     * @param v2 the second vector
+     * @returns the Cosine distance between the two vectors
+     */
+    static double cosineDistance(std::vector<T> v1,std::vector<T> v2);
     
     //=============================================================================
     
