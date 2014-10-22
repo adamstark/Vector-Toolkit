@@ -350,8 +350,7 @@ public:
      */
     static std::vector<T> squareRoot(std::vector<T> v);
     
-    
-    
+    /** Calculate the element-wise difference for a vector */
     static std::vector<T> difference(std::vector<T> v);
         
     
