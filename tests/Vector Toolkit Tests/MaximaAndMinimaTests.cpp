@@ -8,7 +8,7 @@
 #include <boost/test/unit_test.hpp>
 
 //=============================================================
-// BOOLEAN FUNCTION TESTS
+// MAXIMA AND MINIMA TESTS
 //=============================================================
 BOOST_AUTO_TEST_SUITE(MaximaAndMinimaTests)
 

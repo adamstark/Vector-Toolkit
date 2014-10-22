@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E30E400619F791E100220F56 /* QuickVectorCreationTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */; };
 		E30E400819F79A9200220F56 /* BooleanFunctionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */; };
+		E324175819F7F8AA00625E21 /* UsefulFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */; };
+		E324175B19F7FA5200625E21 /* DistancesAndSimilarityTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E324175919F7FA5200625E21 /* DistancesAndSimilarityTests.cpp */; };
 		E3C13A7E19F5634B009B0BE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C13A7D19F5634B009B0BE3 /* main.cpp */; };
 		E3C13A8719F56378009B0BE3 /* VectorToolkit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C13A8519F56378009B0BE3 /* VectorToolkit.cpp */; };
 		E3C9AA2B19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C9AA2A19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QuickVectorCreationTests.cpp; sourceTree = "<group>"; };
 		E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BooleanFunctionTests.cpp; sourceTree = "<group>"; };
+		E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UsefulFunctions.cpp; sourceTree = "<group>"; };
+		E324175919F7FA5200625E21 /* DistancesAndSimilarityTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DistancesAndSimilarityTests.cpp; sourceTree = "<group>"; };
 		E3C13A7A19F5634B009B0BE3 /* Vector Toolkit Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Vector Toolkit Tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C13A7D19F5634B009B0BE3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E3C13A8519F56378009B0BE3 /* VectorToolkit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorToolkit.cpp; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */,
 				E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */,
 				E3C9AA2A19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp */,
+				E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */,
+				E324175919F7FA5200625E21 /* DistancesAndSimilarityTests.cpp */,
 			);
 			path = "Vector Toolkit Tests";
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 				E30E400819F79A9200220F56 /* BooleanFunctionTests.cpp in Sources */,
 				E3C9AA2B19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp in Sources */,
 				E3C13A8719F56378009B0BE3 /* VectorToolkit.cpp in Sources */,
+				E324175819F7F8AA00625E21 /* UsefulFunctions.cpp in Sources */,
+				E324175B19F7FA5200625E21 /* DistancesAndSimilarityTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
