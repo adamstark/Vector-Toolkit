@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30B986619F9777800624663 /* InPlaceOperationsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30B986519F9777800624663 /* InPlaceOperationsTests.cpp */; };
 		E30E400619F791E100220F56 /* QuickVectorCreationTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */; };
 		E30E400819F79A9200220F56 /* BooleanFunctionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */; };
 		E324175819F7F8AA00625E21 /* UsefulFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E30B986519F9777800624663 /* InPlaceOperationsTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InPlaceOperationsTests.cpp; sourceTree = "<group>"; };
 		E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QuickVectorCreationTests.cpp; sourceTree = "<group>"; };
 		E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BooleanFunctionTests.cpp; sourceTree = "<group>"; };
 		E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UsefulFunctions.cpp; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				E3C9AA2A19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp */,
 				E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */,
 				E324175919F7FA5200625E21 /* DistancesAndSimilarityTests.cpp */,
+				E30B986519F9777800624663 /* InPlaceOperationsTests.cpp */,
 			);
 			path = "Vector Toolkit Tests";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				E3C9AA2B19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp in Sources */,
 				E3C13A8719F56378009B0BE3 /* VectorToolkit.cpp in Sources */,
 				E324175819F7F8AA00625E21 /* UsefulFunctions.cpp in Sources */,
+				E30B986619F9777800624663 /* InPlaceOperationsTests.cpp in Sources */,
 				E324175B19F7FA5200625E21 /* DistancesAndSimilarityTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
