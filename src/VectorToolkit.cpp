@@ -408,36 +408,6 @@ double VectorToolkit<T>::mean(std::vector<T> v)
 
 //============================================================
 template <class T>
-double VectorToolkit<T>::geometricMean(std::vector<T> v)
-{
-    // if vector is not empty
-    if (!isEmpty(v))
-    {
-        double sumVal = 0.0;
-        double count = 0;
-        
-        // sum the log of all values
-        for (int i = 0;i < v.size();i++)
-        {
-            // NB: we ignore zero values
-            if (v[i] != 0)
-            {
-                sumVal += log(v[i]);
-                count = count + 1;
-            }
-        }
-    
-        // return the geometric mean as the exponential of the average of the sum of logs
-        return exp(sumVal / count);
-    }
-    else // vector is empty
-    {
-        throw std::invalid_argument( "Received empty vector when calculating geometric mean" );
-    }
-}
-
-//============================================================
-template <class T>
 double VectorToolkit<T>::median(std::vector<T> v)
 {
     // if vector isn't empty
@@ -453,12 +423,12 @@ double VectorToolkit<T>::median(std::vector<T> v)
         if (L  % 2 == 0)
         {
             // take the average of the middle two elements
-            median = (v[L / 2 - 1] + v[L / 2]) / 2;
+            median = ((double)(v[L / 2 - 1] + v[L / 2])) / 2.0;
         }
         else // if the length is odd
         {
             // take the middle element
-            median = v[(L-1) / 2];
+            median = (double) v[(L-1) / 2];
         }
         
         // return the median
@@ -841,7 +811,7 @@ std::vector<T> VectorToolkit<T>::divide(std::vector<T> v1,std::vector<T> v2)
             
             for (int i = 0;i < v1.size();i++)
             {
-                result.push_back(v1[i] * v2[i]);
+                result.push_back(v1[i] / v2[i]);
             }
             
             return result;

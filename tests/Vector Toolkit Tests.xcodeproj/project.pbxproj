@@ -15,6 +15,8 @@
 		E3C13A7E19F5634B009B0BE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C13A7D19F5634B009B0BE3 /* main.cpp */; };
 		E3C13A8719F56378009B0BE3 /* VectorToolkit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C13A8519F56378009B0BE3 /* VectorToolkit.cpp */; };
 		E3C9AA2B19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C9AA2A19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp */; };
+		E3DEAC1D19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3DEAC1C19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp */; };
+		E3DEAC1F19FB05CD006E94B0 /* VectorStatisticsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3DEAC1E19FB05CD006E94B0 /* VectorStatisticsTests.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,8 @@
 		E3C13A8519F56378009B0BE3 /* VectorToolkit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorToolkit.cpp; sourceTree = "<group>"; };
 		E3C13A8619F56378009B0BE3 /* VectorToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorToolkit.h; sourceTree = "<group>"; };
 		E3C9AA2A19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaximaAndMinimaTests.cpp; sourceTree = "<group>"; };
+		E3DEAC1C19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OperationsThatReturnVectors.cpp; sourceTree = "<group>"; };
+		E3DEAC1E19FB05CD006E94B0 /* VectorStatisticsTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorStatisticsTests.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */,
 				E324175919F7FA5200625E21 /* DistancesAndSimilarityTests.cpp */,
 				E30B986519F9777800624663 /* InPlaceOperationsTests.cpp */,
+				E3DEAC1C19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp */,
+				E3DEAC1E19FB05CD006E94B0 /* VectorStatisticsTests.cpp */,
 			);
 			path = "Vector Toolkit Tests";
 			sourceTree = "<group>";
@@ -150,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3DEAC1D19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp in Sources */,
 				E30E400619F791E100220F56 /* QuickVectorCreationTests.cpp in Sources */,
 				E3C13A7E19F5634B009B0BE3 /* main.cpp in Sources */,
+				E3DEAC1F19FB05CD006E94B0 /* VectorStatisticsTests.cpp in Sources */,
 				E30E400819F79A9200220F56 /* BooleanFunctionTests.cpp in Sources */,
 				E3C9AA2B19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp in Sources */,
 				E3C13A8719F56378009B0BE3 /* VectorToolkit.cpp in Sources */,

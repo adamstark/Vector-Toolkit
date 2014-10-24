@@ -114,7 +114,7 @@ public:
     static std::vector<T> getEveryNthElementStartingFromK(std::vector<T> v,int n,int k);
     
     //=============================================================================
-    // Sum, averages, and other statistics
+    // Vector Statistics
     //=============================================================================
     
     /** Counts the number of occurrences of an element in a given vector.
@@ -143,13 +143,7 @@ public:
      * @returns the arithmetic mean of the vector v
      */
     static double mean(std::vector<T> v);
-    
-    /** Calculates the geometric mean of the elements in a vector
-     * @param v the vector from which to calculate the geometric mean
-     * @returns the geometric mean of the vector v
-     */
-    static double geometricMean(std::vector<T> v);
-    
+        
     /** Calculates the median of the elements in a vector
      * @param v the vector from which to calculate the median
      * @returns the median of the vector v

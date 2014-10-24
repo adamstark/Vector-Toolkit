@@ -120,7 +120,7 @@ BOOST_AUTO_TEST_CASE(InPlaceOperationsTest3)
 BOOST_AUTO_TEST_CASE(InPlaceOperationsTest4)
 {
     std::vector<int> x;
-    
+        
     x.push_back(6);
     x.push_back(3);
     x.push_back(1);
