@@ -154,6 +154,10 @@ and lots of other functions of these types.
 Version History
 ---------------
 
+**v1.0.4 - 25/10/2014**
+
+- Updated documentation
+
 **v1.0.3 - 25/10/2014**
 
 - Added unit tests
