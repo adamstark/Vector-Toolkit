@@ -3,47 +3,6 @@ Vector Toolkit
 
 A toolkit of useful functions for processing C++ STL vectors. It contains over 50 functions to help quickly process vectors of numbers.
 
-The following are some example functions that the toolkit includes:
-
-**Simple info about a vector:**
-
-- sum()
-- max()
-- min()
-- maxIndex()
-- minIndex()
-
-**Simple statistics:**
-
-- mean()
-- median()
-- standardDeviation()
-- variance()
-
-**Working with scalars or other vectors:**
-
-- multiply()
-- divide()
-- add()
-- subtract()
-
-**Distance and Similarity:**
-
-- euclideanDistance()
-- cosineSimilarity()
-- cosineDistance()
-
-**Other Handy Things:**
-
-- getEvenElements()
-- getOddElements()
-- printVector()
-- isAllPositiveOrZero()
-- contains()
-- reverse()
-
-and lots of other functions of these types.
-
 Author
 ------
 
@@ -147,9 +106,59 @@ E.g. For long:
 	double distance = VTl::euclideanDistance(x,y);
 
 
+Example Functions
+-----------------
+
+The following are some example functions that the toolkit includes:
+
+**Simple info about a vector:**
+
+- sum()
+- max()
+- min()
+- maxIndex()
+- minIndex()
+
+**Simple statistics:**
+
+- mean()
+- median()
+- standardDeviation()
+- variance()
+
+**Working with scalars or other vectors:**
+
+- multiply()
+- divide()
+- add()
+- subtract()
+
+**Distance and Similarity:**
+
+- euclideanDistance()
+- cosineSimilarity()
+- cosineDistance()
+
+**Other Handy Things:**
+
+- getEvenElements()
+- getOddElements()
+- printVector()
+- isAllPositiveOrZero()
+- contains()
+- reverse()
+
+and lots of other functions of these types.
+
 
 Version History
 ---------------
+
+**v1.0.3 - 25/10/2014**
+
+- Added unit tests
+- Added vector scaling
+- Added functions for quickly creating vectors
 
 **v1.0.2 - 22/10/2014**
 
