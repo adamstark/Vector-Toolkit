@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30B986619F9777800624663 /* InPlaceOperationsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30B986519F9777800624663 /* InPlaceOperationsTests.cpp */; };
+		E30E400619F791E100220F56 /* QuickVectorCreationTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */; };
+		E30E400819F79A9200220F56 /* BooleanFunctionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */; };
+		E324175819F7F8AA00625E21 /* UsefulFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */; };
+		E324175B19F7FA5200625E21 /* DistancesAndSimilarityTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E324175919F7FA5200625E21 /* DistancesAndSimilarityTests.cpp */; };
 		E3C13A7E19F5634B009B0BE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C13A7D19F5634B009B0BE3 /* main.cpp */; };
 		E3C13A8719F56378009B0BE3 /* VectorToolkit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C13A8519F56378009B0BE3 /* VectorToolkit.cpp */; };
+		E3C9AA2B19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C9AA2A19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp */; };
+		E3DEAC1D19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3DEAC1C19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp */; };
+		E3DEAC1F19FB05CD006E94B0 /* VectorStatisticsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3DEAC1E19FB05CD006E94B0 /* VectorStatisticsTests.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +32,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E30B986519F9777800624663 /* InPlaceOperationsTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InPlaceOperationsTests.cpp; sourceTree = "<group>"; };
+		E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QuickVectorCreationTests.cpp; sourceTree = "<group>"; };
+		E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BooleanFunctionTests.cpp; sourceTree = "<group>"; };
+		E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UsefulFunctions.cpp; sourceTree = "<group>"; };
+		E324175919F7FA5200625E21 /* DistancesAndSimilarityTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DistancesAndSimilarityTests.cpp; sourceTree = "<group>"; };
 		E3C13A7A19F5634B009B0BE3 /* Vector Toolkit Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Vector Toolkit Tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C13A7D19F5634B009B0BE3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E3C13A8519F56378009B0BE3 /* VectorToolkit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorToolkit.cpp; sourceTree = "<group>"; };
 		E3C13A8619F56378009B0BE3 /* VectorToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorToolkit.h; sourceTree = "<group>"; };
+		E3C9AA2A19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaximaAndMinimaTests.cpp; sourceTree = "<group>"; };
+		E3DEAC1C19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OperationsThatReturnVectors.cpp; sourceTree = "<group>"; };
+		E3DEAC1E19FB05CD006E94B0 /* VectorStatisticsTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorStatisticsTests.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,14 @@
 			isa = PBXGroup;
 			children = (
 				E3C13A7D19F5634B009B0BE3 /* main.cpp */,
+				E30E400719F79A9200220F56 /* BooleanFunctionTests.cpp */,
+				E30E400419F791E100220F56 /* QuickVectorCreationTests.cpp */,
+				E3C9AA2A19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp */,
+				E324175719F7F8AA00625E21 /* UsefulFunctions.cpp */,
+				E324175919F7FA5200625E21 /* DistancesAndSimilarityTests.cpp */,
+				E30B986519F9777800624663 /* InPlaceOperationsTests.cpp */,
+				E3DEAC1C19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp */,
+				E3DEAC1E19FB05CD006E94B0 /* VectorStatisticsTests.cpp */,
 			);
 			path = "Vector Toolkit Tests";
 			sourceTree = "<group>";
@@ -132,8 +156,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3DEAC1D19FAFFF4006E94B0 /* OperationsThatReturnVectors.cpp in Sources */,
+				E30E400619F791E100220F56 /* QuickVectorCreationTests.cpp in Sources */,
 				E3C13A7E19F5634B009B0BE3 /* main.cpp in Sources */,
+				E3DEAC1F19FB05CD006E94B0 /* VectorStatisticsTests.cpp in Sources */,
+				E30E400819F79A9200220F56 /* BooleanFunctionTests.cpp in Sources */,
+				E3C9AA2B19F7BA5C00F595C3 /* MaximaAndMinimaTests.cpp in Sources */,
 				E3C13A8719F56378009B0BE3 /* VectorToolkit.cpp in Sources */,
+				E324175819F7F8AA00625E21 /* UsefulFunctions.cpp in Sources */,
+				E30B986619F9777800624663 /* InPlaceOperationsTests.cpp in Sources */,
+				E324175B19F7FA5200625E21 /* DistancesAndSimilarityTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +249,13 @@
 		E3C13A8219F5634B009B0BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lboost_unit_test_framework";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -224,6 +263,13 @@
 		E3C13A8319F5634B009B0BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lboost_unit_test_framework";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
