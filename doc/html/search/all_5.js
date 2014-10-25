@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['geometricmean',['geometricMean',['../class_vector_toolkit.html#a3b6ddb670076e4fc68c3bc799040b976',1,'VectorToolkit']]],
   ['getevenelements',['getEvenElements',['../class_vector_toolkit.html#a7e921cd577e34146f284ceb62e409b7f',1,'VectorToolkit']]],
   ['geteverynthelementstartingfromk',['getEveryNthElementStartingFromK',['../class_vector_toolkit.html#a455edf8c7ef19c51c5e6815fcb78fca2',1,'VectorToolkit']]],
   ['getfirstelement',['getFirstElement',['../class_vector_toolkit.html#abab91bd832665239fc04ad7d39a8e992',1,'VectorToolkit']]],
